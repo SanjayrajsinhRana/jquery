@@ -93,15 +93,29 @@ $(document).ready(function()
  //select the div tag whose class specail
   });
 
+$('#b6').click(setInterval(function(){
+var div = $('#ani');
+for(var i=1;i<2;i++){
+
+div.animate({bottom: '-=90%'}, "slow");
+div.animate({left: '+=90%'},"slow");
+div.animate({bottom: '+=90%'}, "slow");
+div.animate({left: '-=90%'}, "slow");}
+},5000));
+
+/*
 $('#b6').click(function(){
 var div = $('#ani');
-for(var i=1;i<9;i++){
+for(var i=1;i<100;i++){
 
 div.animate({bottom: '-=90%'}, "slow");
 div.animate({left: '+=90%'},"slow");
 div.animate({bottom: '+=90%'}, "slow");
 div.animate({left: '-=90%'}, "slow");}
 });
+*/
+
+
 });
 //animate the obj
 </script>
