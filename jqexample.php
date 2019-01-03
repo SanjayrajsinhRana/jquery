@@ -38,12 +38,19 @@
 	}
 	#ani
 	{
-		height: 100px;
-		width: 100px;
-		background-color: red;
+		height: 30px;
+		width: 30px;
+		background-color: yellow;
 		position: absolute;
 		border-radius: 70px;
-		z-index: -1;
+	}
+	div.uni
+	{
+		position: absolute;
+		background-color: red;
+		height: 400px;
+		width: 400px;
+		margin-left: 40%;
 	}
 </style>
 <script src="assets/jquery.min.js"></script>
@@ -54,15 +61,14 @@ $(document).ready(function()
     $("p:not(:has(*)):not(.ignore)").animate({fontSize: "3em"});
 //select p tag who has no child and no class=ignore
   });
-});
 
-$(document).ready(function()
-{
+
+
   $('#b2').click(function(){
     $("p:contains(REPLACE_ME)").replaceWith("REPLACED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 //replace the text REPLACE_ME with text
   });
-});
+
 /*$(document).ready(function()
 {
   $("h1,h2,h3,h4,h5").click(function(){
@@ -71,36 +77,30 @@ $(document).ready(function()
   });
 });*/
 
-$(document).ready(function()
-{
+
   $("#b4").click(function(){
     $(":header").css({"color":"#ccff33"});
 //change the h1 h2 h3 h4 h5 tags font color
   });
-});
-$(document).ready(function()
-{
+
   $('#b5').click(function(){
     $("li:visible").animate({fontSize: "3em"});
 //animate the only visible element of li
   });
-});
-$(document).ready(function()
-{
+
 	$('#b3').click(function(){
     $("div:has(.special)").animate({fontSize: "3em"});
  //select the div tag whose class specail
   });
-});
-$(document).ready(function()
-{
+
 $('#b6').click(function(){
 var div = $('#ani');
 for(var i=1;i<9;i++){
-div.animate({bottom: '+=50%'}, "slow");
-div.animate({left: '+=50%'}, "slow");
-div.animate({bottom: '-=50%'}, "slow");
-div.animate({left: '-=50%'},"slow");}
+
+div.animate({bottom: '-=90%'}, "slow");
+div.animate({left: '+=90%'},"slow");
+div.animate({bottom: '+=90%'}, "slow");
+div.animate({left: '-=90%'}, "slow");}
 });
 });
 //animate the obj
@@ -148,9 +148,12 @@ div.animate({left: '-=50%'},"slow");}
 			<li>element 3</li>
 		</ul>
 		<button id="b5"> button-5</button>
-		<div id="ani">		
-		</div>
+		
 		<button id="b6">button6</button>
+		<div class="uni">
+			<div id="ani">		
+		</div>
+		</div>
 	</center>
 </body>
 </html>
