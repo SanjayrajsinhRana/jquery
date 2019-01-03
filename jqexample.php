@@ -46,11 +46,15 @@
 	}
 	div.uni
 	{
-		position: absolute;
+		position: relative;
 		background-color: red;
 		height: 400px;
 		width: 400px;
-		margin-left: 40%;
+		border-radius: 5px;
+	}
+	.list
+	{
+		list-style: none;
 	}
 </style>
 <script src="assets/jquery.min.js"></script>
@@ -156,7 +160,7 @@ div.animate({left: '-=90%'}, "slow");}
 		</h4>
 		<button id="b4">button-4</button>
 		</div>
-		<ul>
+		<ul class="list">
 			<li>ELEMENT 1 VISIBLE</li>
 			<li style="display: none;">element 2 invisible</li>
 			<li>element 3</li>
