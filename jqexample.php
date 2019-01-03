@@ -36,6 +36,15 @@
 		background-color: #c2c2a3;
 		border-color: #8a8a5c;
 	}
+	#ani
+	{
+		height: 100px;
+		width: 100px;
+		background-color: red;
+		position: absolute;
+		border-radius: 70px;
+		z-index: -1;
+	}
 </style>
 <script src="assets/jquery.min.js"></script>
 <script type="text/javascript">
@@ -54,8 +63,6 @@ $(document).ready(function()
 
   });
 });
-
-
 /*$(document).ready(function()
 {
   $("h1,h2,h3,h4,h5").click(function(){
@@ -71,12 +78,6 @@ $(document).ready(function()
 
   });
 });
-
-
-
-
-
-
 $(document).ready(function()
 {
   $('#b5').click(function(){
@@ -84,10 +85,6 @@ $(document).ready(function()
 
   });
 });
-
-
-
-
 $(document).ready(function()
 {
 	$('#b3').click(function(){
@@ -96,26 +93,18 @@ $(document).ready(function()
   });
 });
 
-
-
-
-$(document).ready(function()
-{
-	$('').click(function(){
-    $("div:has(.special)").animate({fontSize: "3em"});
-
-  });
-});
-
-
-
-/*$('#click5').click(function(){
-				for(var i=1;i<9;i++){
-				$('div.square').animate({left: '250px'});
-				$('div.square').css({"position":"absolute"});
-				}
-			}); */
-	
+				$(document).ready(function()
+				{
+				$('#b6').click(function(){
+				var div = $('#ani');
+    		for(var i=1;i<9;i++){
+    			
+    			div.animate({bottom: '+=50%'}, "slow");
+    			div.animate({left: '+=50%'}, "slow");
+    			div.animate({bottom: '-=50%'}, "slow");
+    			div.animate({left: '-=50%'},"slow");}
+				});
+			});
 </script>
 </head>
 <body>
@@ -136,18 +125,13 @@ $(document).ready(function()
 			 </p>
 			 <button id="b2">button-2</button>
 		</div>
-
-
 		<div>
 			<p class="special">
 				DIV TAG WITH CHILD AND CLASS SPECIAL.<br>
 				<button id="b3">button-3</button>
-			</p>
-			
+			</p>			
 		</div>
-
-		<div class="head1">
-			
+		<div class="head1">			
 		<h2>
 			this is headding 2
 		</h2>
@@ -159,24 +143,15 @@ $(document).ready(function()
 		</h4>
 		<button id="b4">button-4</button>
 		</div>
-
 		<ul>
 			<li>ELEMENT 1 VISIBLE</li>
 			<li style="display: none;">element 2 invisible</li>
 			<li>element 3</li>
 		</ul>
 		<button id="b5"> button-5</button>
-
-
-
-
-
-
-
-
-
-
-
+		<div id="ani">		
+		</div>
+		<button id="b6">button6</button>
 	</center>
 </body>
 </html>
