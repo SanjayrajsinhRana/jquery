@@ -52,15 +52,15 @@ $(document).ready(function()
 {
   $('#b1').click(function(){
     $("p:not(:has(*)):not(.ignore)").animate({fontSize: "3em"});
-
+//select p tag who has no child and no class=ignore
   });
 });
 
 $(document).ready(function()
 {
   $('#b2').click(function(){
-    $("p:contains(REPLACE_ME)").replaceWith("REPLACED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
-
+    $("p:contains(REPLACE_ME)").replaceWith("REPLACED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//replace the text REPLACE_ME with text
   });
 });
 /*$(document).ready(function()
@@ -75,36 +75,35 @@ $(document).ready(function()
 {
   $("#b4").click(function(){
     $(":header").css({"color":"#ccff33"});
-
+//change the h1 h2 h3 h4 h5 tags font color
   });
 });
 $(document).ready(function()
 {
   $('#b5').click(function(){
     $("li:visible").animate({fontSize: "3em"});
-
+//animate the only visible element of li
   });
 });
 $(document).ready(function()
 {
 	$('#b3').click(function(){
     $("div:has(.special)").animate({fontSize: "3em"});
-
+ //select the div tag whose class specail
   });
 });
-
-				$(document).ready(function()
-				{
-				$('#b6').click(function(){
-				var div = $('#ani');
-    		for(var i=1;i<9;i++){
-    			
-    			div.animate({bottom: '+=50%'}, "slow");
-    			div.animate({left: '+=50%'}, "slow");
-    			div.animate({bottom: '-=50%'}, "slow");
-    			div.animate({left: '-=50%'},"slow");}
-				});
-			});
+$(document).ready(function()
+{
+$('#b6').click(function(){
+var div = $('#ani');
+for(var i=1;i<9;i++){
+div.animate({bottom: '+=50%'}, "slow");
+div.animate({left: '+=50%'}, "slow");
+div.animate({bottom: '-=50%'}, "slow");
+div.animate({left: '-=50%'},"slow");}
+});
+});
+//animate the obj
 </script>
 </head>
 <body>
